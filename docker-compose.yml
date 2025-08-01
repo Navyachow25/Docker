@@ -1,0 +1,18 @@
+version: "3.9"  # optional, can be removed if you're getting version warnings
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+
+  version: '3.8'
+
+
+  backend:
+    build: .
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./uploads:/app/uploads
+
